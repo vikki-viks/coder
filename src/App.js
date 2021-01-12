@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Title } from "./components/Title";
+import { BaseInput } from "./components/BaseInput";
+import { BaseButton } from "./components/BaseButton";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Title text="ENTER A MESSAGE YOU WANT TO ENCODE"></Title>
+      <BaseInput placeholder="Enter the message here"></BaseInput>
+      <BaseButton text="Copy"></BaseButton>
     </div>
   );
 }
