@@ -1,3 +1,5 @@
+import { Spinner } from "./Spinner";
+
 const styles = {
   maxWidth: "508px",
   width: "100%",
@@ -7,13 +9,22 @@ const styles = {
   fontFamily: "'Poppins', sans-serif",
   fontWeight: "400",
   backgroundColor: "#279ee1",
-  borderRadius: "20px",
+  borderRadius: "10px",
   outline: "0",
   border: "0",
   color: "white",
-  fontSize: "18px",
+  fontSize: "14px",
+  letterSpacing: "2px",
+  textTransform: "uppercase",
+  marginTop: "32px",
+  marginBottom: "32px",
+  cursor: "pointer",
 };
 
-export const BaseButton = ({ text }) => {
-  return <button style={styles}>{text}</button>;
+export const BaseButton = ({ text, showSpinner, onClick }) => {
+  return (
+    <button style={styles} onClick={onClick}>
+      {showSpinner ? <Spinner></Spinner> : text}
+    </button>
+  );
 };
